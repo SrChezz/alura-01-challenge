@@ -178,6 +178,7 @@ footer {
 
   .input-container {
     min-width: 55%;
+    box-sizing: border-box;
   }
 
   .input-container textarea {
