@@ -12,53 +12,35 @@ function doEncrypt(text) {
   Array.from(text).forEach(letter => {
     let unicode = letter.charCodeAt(0);
 
-    if (unicode == 32) {
-      result.push(String.fromCharCode(unicode));
-      return;
-    }
+    if (unicode == 32) return result.push(' ');
 
     if (unicode < 97 || unicode > 122) {
-      mostrarError();
       throw Error('El ingreso de datos no es  correcto');
     }
 
-    result.push(String.fromCharCode(unicode + 2));
-    result.push(String.fromCharCode(unicode + 3));
+    if (unicode == 97) return result.push('enter');
+    if (unicode == 101) return result.push('imes');
+    if (unicode == 105) return result.push('ai');
+    if (unicode == 111) return result.push('ober');
+    if (unicode == 117) return result.push('ufat');
+
+    result.push(String.fromCharCode(unicode));
   });
 
   return result.join('');
 }
 
 function doDesencrypt(text) {
-  let result = [];
-  let even = true;
+  let result = '';
 
-  Array.from(text).forEach((letter, i) => {
-    let unicode = letter.charCodeAt(0);
+  result = text
+    .replaceAll('enter', 'a')
+    .replaceAll('imes', 'e')
+    .replaceAll('ai', 'i')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
 
-    // console.log(unicode, i);
-
-    if (unicode == 32) {
-      result.push(String.fromCharCode(unicode));
-      even = !even;
-      console.log(even);
-      return;
-    }
-
-    if (unicode < 97 || unicode > 125) {
-      throw Error('El ingreso de datos no es  correcto');
-    }
-
-    if (even) {
-      if (i % 2 == 0) return;
-    } else {
-      if (i % 2 == 1) return;
-    }
-
-    result.push(String.fromCharCode(unicode - 3));
-  });
-
-  return result.join('');
+  return result;
 }
 
 function mostrarError() {
@@ -90,7 +72,6 @@ dButton.addEventListener('click', e => {
 
 outputContainer.addEventListener('click', e => {
   if (e.target.classList.contains('copy')) {
-    console.log('test');
     navigator.clipboard.writeText(document.getElementById('output').innerText);
   }
 });
