@@ -18,9 +18,9 @@ function doEncrypt(text) {
       throw Error('El ingreso de datos no es  correcto');
     }
 
-    if (unicode == 97) return result.push('enter');
-    if (unicode == 101) return result.push('imes');
-    if (unicode == 105) return result.push('ai');
+    if (unicode == 97) return result.push('ai');
+    if (unicode == 101) return result.push('enter');
+    if (unicode == 105) return result.push('imes');
     if (unicode == 111) return result.push('ober');
     if (unicode == 117) return result.push('ufat');
 
@@ -34,9 +34,9 @@ function doDesencrypt(text) {
   let result = '';
 
   result = text
-    .replaceAll('enter', 'a')
-    .replaceAll('imes', 'e')
-    .replaceAll('ai', 'i')
+    .replaceAll('ai', 'a')
+    .replaceAll('enter', 'e')
+    .replaceAll('imes', 'i')
     .replaceAll('ober', 'o')
     .replaceAll('ufat', 'u');
 
