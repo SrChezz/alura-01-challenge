@@ -176,6 +176,10 @@ footer {
     min-width: 55%;
   }
 
+  .input-container textarea {
+    width: 100%;
+  }
+
   .output-container {
     box-sizing: border-box;
     min-width: 40%;
