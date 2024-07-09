@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  font-size: 16px;
+  --main-font: 'Inter', sans-serif;
+
+  --light-blue: #f3f5fc;
+  --darkblue-300: #0a3871;
+  --red-error: #ef4d4d;
+
+  --gray-500: #343a40;
+  --gray-400: #495057;
+  --gray-300: #d8dfe8;
+}
+
+body,
+textarea,
+input {
+  font-family: var(--main-font);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease-in;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+button {
+  padding: 16px 24px;
+  border-color: var(--darkblue-300);
+  border-radius: 24px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in;
+}
+
+button:hover {
+  opacity: 0.75;
+}
+
+body {
+  background-color: var(--light-blue);
+  height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 16px;
+  left: 5%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--gray-500);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--gray-400);
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+}
+
+/* Main Content */
+
+.main-container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-container {
+  height: 80vh;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.input-container .buttons {
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.output-container {
+  min-width: 400px;
+  height: 80vh;
+  background-color: white;
+  padding: 32px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.output-container-true {
+  text-align: left;
+  justify-content: space-between;
+}
+
+.output-text {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.no-results {
+  padding: 16px;
+}
+
+/* Others */
+
+.copy {
+  width: 90%;
+}
+
+.primary-button {
+  background-color: var(--darkblue-300);
+  color: white;
+}
+
+.secondary-button {
+  background-color: var(--gray-300);
+  color: var(--darkblue-300);
+}
+
+.button {
+  flex: auto;
+}
+
+.info {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+.info-error {
+  color: var(--red-error);
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  padding: 12px 0px;
+}

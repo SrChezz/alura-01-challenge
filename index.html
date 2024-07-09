@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/81478abc59.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Encriptador de Texto</title>
+  </head>
+  <body>
+    <header>
+      <img src="media/logo.png" alt="Logo de Alura" />
+    </header>
+
+    <main class="main-container">
+      <div class="input-container">
+        <textarea name="input" id="input" cols="30" rows="30">
+Escriba aquí</textarea
+        >
+
+        <div>
+          <span class="info"
+            ><i class="fa-solid fa-circle-info"></i> Solo letras minúsculas y
+            sin acentos</span
+          >
+          <div class="buttons">
+            <button class="button primary-button" id="encrypt">
+              Encriptar
+            </button>
+            <button class="button secondary-button" id="desencrypt">
+              Desencriptar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="output-container">
+        <!-- <p id="output" class="output-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+          doloribus architecto suscipit autem voluptatibus laudantium voluptatem
+          quia quaerat ad voluptate, labore quis id sint fuga exercitationem
+          corrupti nemo numquam dicta.
+        </p>
+
+        <button class="copy secondary-button" id="copy">Copiar</button> -->
+
+        <div class="no-results">
+          <img
+            src="media/image.png"
+            alt="Grafico de alguien buscando con una lupa"
+          />
+          <h3>Ningún mensaje fue encontrado</h3>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        Made with ❤️ by
+        <a href="https://github.com/SrChezz"
+          ><i class="fa-brands fa-github"></i> SrChezz</a
+        >
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
